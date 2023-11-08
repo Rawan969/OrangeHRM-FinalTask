@@ -1,0 +1,11 @@
+{
+    "selection1":"Location",
+    "selection2":"Job Title",
+    "displayTitle1":"Personal",
+    "displayTitle2":"Job",
+    "displayTitle3":"Salary",
+    "displayField1":"Employee First Name",
+    "displayField2":"Job Title",
+    "displayField3":"Amount"
+
+}
