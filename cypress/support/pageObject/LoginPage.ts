@@ -3,6 +3,8 @@ class loginPage {
     userName: () => cy.get('[placeholder="Username"]'),
     password: () => cy.get('[placeholder="Password"]'),
     loginBtn: () => cy.get("button"),
+    logoutDropDown: () => cy.get(".oxd-userdropdown-tab"),
+    logoutBtn: () => cy.contains("Logout"),
   };
 
   assertianElem = [
@@ -23,11 +25,16 @@ class loginPage {
     this.elements.userName().type(userName);
     this.elements.password().type(password);
     this.elements.loginBtn().click();
-    // cy.get('.oxd-topbar-header-breadcrumb-module').should('contain','Dashboard');
+    cy.wait(5000);
   }
 
   verfiyElem(message: string) {
     this.assertianElem.find(({ msg }) => msg === message)?.elem;
+  }
+  logout() {
+    this.elements.logoutDropDown().click();
+    this.elements.logoutBtn().click();
+    cy.wait(7000);
   }
 }
 export default loginPage;
